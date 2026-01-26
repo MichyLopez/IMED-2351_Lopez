@@ -1,2 +1,32 @@
-console.log("Good Evening, Professor Macias. What is your favorite color?") ;
-document.write("What is your favorite lesson to teach in this course?") ;
+// GLOBAL VARIABLE
+var studentName = "Michelynne Lopez";
+console.log("Student Name:", studentName);
+
+// STRING VARIABLE
+let welcomeMessage = "Welcome to my JavaScript project!";
+console.log(welcomeMessage);
+
+// BLOCK VARIABLE
+{
+    let className = "Digital Media Programming";
+    console.log("Class Name:", className);
+}
+
+// MATHEMATICAL OPERATIONS
+let assignmentScore = 85;
+let extraCredit = 10;
+let finalScore = assignmentScore + extraCredit;
+
+console.log("Final Score:", finalScore);
+
+
+// OBJECT VARIABLE USING CONST
+const studentInfo = {
+    firstName: "Michelynne",
+    lastName: "Lopez",
+    major: "Digital Media",
+    college: "Northwest Vista",
+    online: true
+};
+
+console.log("Student Info Object:", studentInfo);
