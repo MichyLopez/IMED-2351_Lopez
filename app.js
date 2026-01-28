@@ -13,11 +13,11 @@ console.log(welcomeMessage);
 }
 
 // MATHEMATICAL OPERATIONS
-let assignmentScore = 85;
+let assignmentGrade = 85;
 let extraCredit = 10;
-let finalScore = assignmentScore + extraCredit;
+let finalGrade = assignmentGrade + extraCredit;
 
-console.log("Final Score:", finalScore);
+console.log("Final Grade:", finalGrade);
 
 
 // OBJECT VARIABLE USING CONST
