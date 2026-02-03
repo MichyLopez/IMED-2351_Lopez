@@ -1,32 +1,50 @@
-// GLOBAL VARIABLE
-var studentName = "Michelynne Lopez";
-console.log("Student Name:", studentName);
+ function logger(){
+    console.log("Hello and Welcome");
+ }
 
-// STRING VARIABLE
-let welcomeMessage = "Welcome to my JavaScript project!";
-console.log(welcomeMessage);
+ logger();
 
-// BLOCK VARIABLE
-{
-    let className = "Digital Media Programming";
-    console.log("Class Name:", className);
-}
+document.getElementById("welcome").innerHTML = `<h1> Hello, Welcome 
+to my one-page project.</h1> 
+<h2>What is your name?</h2>`
 
-// MATHEMATICAL OPERATIONS
-let assignmentGrade = 85;
-let extraCredit = 10;
-let finalGrade = assignmentGrade + extraCredit;
+//Object with properties
+let myClass = {
+    course: "IMED-2351",
+    teacher: "Rodolfo Macias",
+    semester: "Spring 2026",
 
-console.log("Final Grade:", finalGrade);
-
-
-// OBJECT VARIABLE USING CONST
-const studentInfo = {
-    firstName: "Michelynne",
-    lastName: "Lopez",
-    major: "Digital Media",
-    college: "Northwest Vista",
-    online: true
+//Method
+    excitmentSound: function() {
+        return "Whoop Whoop!";
+    }
+};
+//Functions pass parameters in & out
+function getFullName(first, last) {
+    return first + " " + last;
 };
 
-console.log("Student Info Object:", studentInfo);
+function getClassName() {
+    return myClass.course + " in " + myClass.semester + " with " + myClass.teacher;
+}
+
+function createSentance(name, course) {
+    return name + " is in " + course + ".";
+};
+
+//Event
+document.getElementById("showBtn").addEventListener("click", function() {
+
+    let rawFirst = document.getElementById("fName").value;
+    let rawLast = document.getElementById("lName").value;
+
+    let finalName =getFullName(rawFirst, rawLast);
+
+    let finalCar = getClassName();
+
+    let message = createSentance(finalName, finalCar);
+
+    let sound = myClass.excitmentSound();
+
+    document.getElementById("result").innerText = message + " " + sound;
+});
