@@ -17,18 +17,26 @@
         <p id="result"></p>
     </div>
     <br><br>
-    <div class="4.5 String and Conditions">
-        <h2>Super Pet Generator</h2>
+    <div class="5.4 Loops and DOM">
+        <h2 id="mainTitle">Hero Training Acadamey</h2>
         <p>Animal: <b>Cat, Dog, Bird, or Lizard?</b></p>
-        <input type="text" id="petName" placeholder="Pet Name">
+        <input type="text" id="petName" oninput="changeTitleColor()" placeholder="Hero Name">
         <input type="text" id="animal" placeholder="Animal">
         <input type="text" id="petPower" placeholder="Power Level (1-10)">
         <br><br>
-        <button onclick="generateHero()">Generate Stats</button>
-        <br><br>
-        <div id="output">Results will appear here ...</div>
-    </div>
+        <button onclick="startTraining()">Beging Training</button>
 
+        <div id="heroCard">
+            <h2 id="cardTitle">Hero Status</h2>
+            <div class="stats-box">
+                <p id="bioOutput">Enter Details to train!</p>
+                <hr>
+                <p><b>Training Log:</b></p>
+                <ul id="trainingLog"></ul>
+            </div>
+        </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
